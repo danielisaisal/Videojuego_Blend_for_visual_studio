@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="_212_TDBNP_3P_EX_DISR.Screamer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_212_TDBNP_3P_EX_DISR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image x:Name="imgScreamer" Source="/Assets/uga_scream.png" Stretch="Fill"/>
+
+        <Rectangle x:Name="rtFondo" Stroke="Black" Fill="Black"/>
+        <Button x:Name="btnEmpezar" Content="Play" Height="83" Margin="352,451,0,0" VerticalAlignment="Top" Width="281" Background="#33FFFFFF" Foreground="White" Click="btnEmpezar_Click" FontSize="36"/>
+        <Button x:Name="btnVolver" Content="Volver" Height="83" Margin="721,451,0,0" VerticalAlignment="Top" Width="150" Background="#33FFFFFF" Foreground="White" FontSize="36" Click="btnVolver_Click"/>
+    </Grid>
+</Page>

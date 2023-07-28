@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="_212_TDBNP_3P_EX_DISR.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_212_TDBNP_3P_EX_DISR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="sbIniciando">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="txtAvisoTitulo" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="txtAvisoContenido" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01.5000000" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:04" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid>
+        <Rectangle Stroke="Black" Fill="Black"/>
+        <TextBlock x:Name="txtAvisoTitulo" Height="72" Margin="454,55,454,0" Text="Aviso" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Red" FontSize="48"/>
+        <TextBlock x:Name="txtAvisoContenido" Height="221" Margin="59,124,59,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="48" TextAlignment="Center" Text="El siguiente juego tiene imagenes y contenido no apto para sensibles, queda en ti esa responsabilidad."/>
+        <Button x:Name="btnAdvertencia" Content="Entendido" Height="81" Margin="334,467,0,0" VerticalAlignment="Top" Width="307" FocusVisualPrimaryBrush="White" Background="#33FFFFFF" FontSize="36" Foreground="White" Click="btnAdvertencia_Click"/>
+        <TextBlock x:Name="pageTitle" HorizontalAlignment="Left" Height="55" Margin="59,32,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="118"/>
+
+    </Grid>
+</Page>

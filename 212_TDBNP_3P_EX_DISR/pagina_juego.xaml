@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="_212_TDBNP_3P_EX_DISR.pagina_juego"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_212_TDBNP_3P_EX_DISR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="sbInicioP">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="image" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="btnJugar" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid x:Name="imgPantalla">
+        <Rectangle Stroke="Black" Fill="Black"/>
+
+        <Image x:Name="image" Source="/Assets/castle_ghost.gif" Stretch="Fill"/>
+        <Button x:Name="btnJugar" Content="Jugar" Height="64" Margin="0,444,0,0" VerticalAlignment="Top" Width="223" HorizontalAlignment="Center" Background="#33FFFFFF" Foreground="White" FontSize="36" FontFamily="Dubai" Click="button_Click"/>
+        <ComboBox x:Name="cmbImagen" Margin="0,10,10,0" SelectionChanged="cmbImagen_SelectionChanged" HorizontalAlignment="Right" Width="120"/>
+        <Button x:Name="btnScreamer" Content="¿Screamer?" Height="48" Margin="10,10,0,0" VerticalAlignment="Top" Width="146" Background="#33FFFFFF" Foreground="White" FontSize="22" Click="btnScreamer_Click"/>
+        <TextBlock x:Name="txtTitulo" HorizontalAlignment="Center" Margin="0,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="100" FontFamily="Perpetua Titling MT"><Run Text="Ghost"/><LineBreak/><Run Text="Castle"/></TextBlock>
+
+    </Grid>
+</Page>
